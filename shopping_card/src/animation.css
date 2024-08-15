@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --size: min(40vw, 40vh);
+  --width: calc(var(--size) / 40);
+  --dist: calc(var(--width) * 9.8);
+  --bg: url('https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5eeea355389655.59822ff824b72.gif');
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(-45deg, #111, #222);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.tube {
+  transform-style: preserve-3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: spin 6s infinite linear;
+  width: calc(var(--dist) * 2);
+  height: var(--size);
+}
+
+.strip {
+  transform-style: preserve-3d;
+  background-color: white;
+  height: var(--size);
+  width: var(--width);
+  position: absolute;
+  background-image: var(--bg);
+  background-size: calc(var(--width) * 64) auto;
+  background-repeat: no-repeat;
+  backface-visibility: hidden;
+}
+
+@keyframes spin {
+  0% {
+    transform: perspective(400px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(400px) rotateY(360deg);
+  }
+}
