@@ -7,5 +7,5 @@ import RouteConfig from './routes/Routes.jsx';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouteConfig />
-  </StrictMode>,
+  </StrictMode>, 
 )
