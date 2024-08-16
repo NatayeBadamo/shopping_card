@@ -12,8 +12,6 @@ function RouteConfig() {
             <Route path="/" element={<App />} />
             <Route path="/store" element={<Store />} />
             <Route path="/about" element={<About />} />
-            <Route path="/detail" element={<Detail />} />
-
 
 
             {/* Add more routes here */}
